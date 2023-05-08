@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="edumain" id="main">
+        <br/>
+        <div class="col-lg-12">
+        <div class="techcontainer col-11 col-lg-4">
+            <h4 class="techhead">Technical Skills :</h1>
+            <ul>
+                <li class="skills">Java</li>
+                <li class="skills">HTML</li>
+                <li class="skills">JavaScript</li>
+                <li class="skills">OperatingSystems</li>
+                <li class="skills">Database Management</li>
+            </ul>
+         </div>
+         <div class="techcontainer col-11 col-lg-4">
+            <h4 class="techhead">Internships :</h1> 
+                <ul>
+                    <li class="skills">
+                        <span class="highlight">TCS ION RIO internship </span> I have created "CAPTCHA" secured webpage.
+                    </li>
+                    <li class="skills">
+                        <span class="highlight"> Bharat Intern </span>I have done two projects.First on is a "TEMPERATURE CONVERTOR" website
+                        and second one is a "PORTFOLIO" website
+                    </li>
+                </ul>
+        </div>
+    </div>
+          <label for="academic" class="techhead ">Academic Details</label>
+              <select  id="academic" class=" ">
+                <option value="tenth">Matriculation</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="undergraduation">UnderGraduation </option>
+              </select>
+       <div class="techcontainer col-10 col-lg-5">
+        <div id="tenth" class="">
+            <p class="educationinfo">
+               <h4 class="techhead">Tenth Class</h4>
+               <ul>
+                <li class="skills">School Name : Sri Chaitanya School</li>
+                <li class="skills">Passing Year: 2017</li>
+                <li class="skills">CGPA : 10 points</li>
+                </ul>
+            </p>
+        </div>
+        <div id="intermediate" class="d-none">
+            <p class="educationinfo">
+               <h4 class="techhead">Intermediate</h4>
+               <ul>
+                <li class="skills">College Name : Siddartha Junior College</li>
+                <li class="skills">Passing Year: 2019</li>
+                <li class="skills">Group : MPC</li>
+                <li class="skills">CGPA : 9.94 points</li>
+                </ul>
+            </p>
+        </div>
+        <div id="graduation" class="d-none">
+            <p class="educationinfo">
+               <h4 class="techhead">UnderGraduation</h4>
+               <ul>
+                <li class="skills">College Name :Andhra University</li>
+                <li class="skills">Passing Year: 2024</li>
+                <li class="skills">Branch : ECE</li>
+                <li class="skills">CGPA : 8.7 points</li>
+                </ul>
+            </p>
+        </div>
+    </div>
+    <a href="/index.html" ><button class="btn btn-light ml-5">Back</button></a>
+    <br/>
+    <br/>
+    
+    </div>
+        <script>
+            let main=document.getElementById("main");
+            let tenthdetails=document.getElementById("tenth");
+            let interdetails=document.getElementById("intermediate");
+            let graduationdetails=document.getElementById("graduation");
+            let academicvalue;
+            let academic=document.getElementById("academic");
+            academic.addEventListener("change",function(event){
+                academicvalue=event.target.value;
+            if(academicvalue=="intermediate"){
+                interdetails.classList.remove("d-none");
+                tenthdetails.classList.add("d-none");
+                graduationdetails.classList.add("d-none");
+            }
+            if(academicvalue==="undergraduation"){
+                interdetails.classList.add("d-none");
+                tenthdetails.classList.add("d-none");
+                graduationdetails.classList.remove("d-none");
+            }
+            if(academicvalue==="tenth"){
+                interdetails.classList.add("d-none");
+                tenthdetails.classList.remove("d-none");
+                graduationdetails.classList.add("d-none");
+            }
+        });
+        </script>
+        
+</body>
+</html>
